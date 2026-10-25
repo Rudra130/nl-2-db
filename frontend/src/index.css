@@ -1,33 +1,37 @@
-/* Modern Claymorphic & Glassmorphic Design System */
+/* Modern Claymorphic & Glassmorphic Design System (Frosted Glass-Clay) */
 :root,
 [data-theme="dark"] {
   --theme-mode: dark;
   --bg-primary: #070a11;
   --bg-secondary: #0f1523;
-  --bg-tertiary: #161e31;
-  --bg-glass: rgba(15, 21, 35, 0.92);
-  --bg-card: #121827;
-  --bg-input: #0a0e18;
-  --summary-card-bg: #141c2e;
-  --code-bg: #060910;
+  --bg-tertiary: rgba(22, 30, 49, 0.78);
+  --bg-glass: rgba(15, 21, 35, 0.75);
+  --bg-card: rgba(18, 24, 39, 0.78);
+  --bg-input: rgba(10, 14, 24, 0.85);
+  --summary-card-bg: linear-gradient(135deg, rgba(139, 92, 246, 0.14) 0%, rgba(6, 182, 212, 0.08) 100%), rgba(17, 23, 38, 0.78);
+  --code-bg: rgba(6, 9, 16, 0.88);
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(139, 92, 246, 0.45);
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.01) 60%, transparent 100%);
+
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --border-hover: rgba(139, 92, 246, 0.55);
   --border-focus: #8b5cf6;
 
-  /* Claymorphic 3D Dual-Inset Shadows (Dark Mode - Obsidian Clay) */
-  --clay-panel-bg: #111726;
-  --clay-panel-border: rgba(255, 255, 255, 0.08);
+  /* Frosted Glass-Clay 3D Dual-Inset Depth (Dark Mode) */
+  --clay-panel-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(17, 23, 38, 0.76);
+  --clay-panel-border: rgba(255, 255, 255, 0.12);
   --clay-panel-shadow: 
-    0 16px 36px -6px rgba(0, 0, 0, 0.7),
-    0 6px 14px -3px rgba(0, 0, 0, 0.5),
-    inset 3px 3px 6px rgba(255, 255, 255, 0.08),
-    inset -4px -4px 10px rgba(0, 0, 0, 0.8);
+    0 16px 36px -6px rgba(0, 0, 0, 0.65),
+    0 6px 14px -3px rgba(0, 0, 0, 0.45),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.12),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.75);
   --clay-panel-shadow-hover: 
-    0 22px 45px -8px rgba(0, 0, 0, 0.8),
-    0 8px 18px -4px rgba(0, 0, 0, 0.6),
-    inset 3px 3px 7px rgba(255, 255, 255, 0.12),
-    inset -4px -4px 10px rgba(0, 0, 0, 0.85);
+    0 22px 45px -8px rgba(0, 0, 0, 0.75),
+    0 8px 18px -4px rgba(0, 0, 0, 0.55),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.18),
+    inset -3px -3px 9px rgba(0, 0, 0, 0.8);
 
   --clay-btn-primary-bg: linear-gradient(135deg, #8b5cf6, #7c3aed);
   --clay-btn-primary-shadow: 
@@ -43,10 +47,10 @@
     inset -2px -2px 4px rgba(255, 255, 255, 0.2),
     inset 3px 3px 6px rgba(0, 0, 0, 0.55);
 
-  --clay-btn-secondary-bg: #182033;
+  --clay-btn-secondary-bg: rgba(24, 32, 51, 0.75);
   --clay-btn-secondary-shadow: 
     0 6px 16px -3px rgba(0, 0, 0, 0.5),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.08),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.10),
     inset -2px -2px 5px rgba(0, 0, 0, 0.6);
   --clay-btn-secondary-active: 
     0 2px 6px -1px rgba(0, 0, 0, 0.4),
@@ -55,23 +59,23 @@
 
   --clay-carved-shadow: 
     inset 3px 3px 7px rgba(0, 0, 0, 0.8),
-    inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+    inset -2px -2px 5px rgba(255, 255, 255, 0.06);
 
   --clay-pill-shadow: 
-    0 4px 10px -2px rgba(0, 0, 0, 0.5),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.6);
+    0 4px 10px -2px rgba(0, 0, 0, 0.45),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.12),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.55);
 
   --hover-overlay: rgba(255, 255, 255, 0.08);
-  --ghost-hover: rgba(255, 255, 255, 0.05);
-  --table-border: rgba(255, 255, 255, 0.05);
-  --table-row-hover: rgba(139, 92, 246, 0.08);
+  --ghost-hover: rgba(255, 255, 255, 0.06);
+  --table-border: rgba(255, 255, 255, 0.06);
+  --table-row-hover: rgba(139, 92, 246, 0.10);
 
   --accent-primary: #8b5cf6;
   --accent-primary-hover: #7c3aed;
   --accent-cyan: #06b6d4;
-  --accent-cyan-glow: rgba(6, 182, 212, 0.25);
-  --accent-purple-glow: rgba(139, 92, 246, 0.25);
+  --accent-cyan-glow: rgba(6, 182, 212, 0.3);
+  --accent-purple-glow: rgba(139, 92, 246, 0.3);
   --accent-emerald: #10b981;
   --accent-rose: #f43f5e;
   --accent-amber: #f59e0b;
@@ -96,38 +100,43 @@
   --radius-full: 9999px;
   
   --transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  --bg-gradient-1: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.09) 0%, transparent 40%);
-  --bg-gradient-2: radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.07) 0%, transparent 40%);
+  --bg-gradient-1: radial-gradient(circle at 12% 15%, rgba(139, 92, 246, 0.16) 0%, transparent 45%);
+  --bg-gradient-2: radial-gradient(circle at 88% 85%, rgba(6, 182, 212, 0.13) 0%, transparent 45%);
+  --bg-gradient-3: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.07) 0%, transparent 60%);
 }
 
 [data-theme="light"] {
   --theme-mode: light;
-  --bg-primary: #edf2f7;
+  --bg-primary: #eef2f7;
   --bg-secondary: #f8fafc;
-  --bg-tertiary: #e2e8f0;
-  --bg-glass: rgba(248, 250, 252, 0.94);
-  --bg-card: #f8fafc;
-  --bg-input: #ffffff;
-  --summary-card-bg: #f8fafc;
+  --bg-tertiary: rgba(226, 232, 240, 0.82);
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-input: rgba(255, 255, 255, 0.9);
+  --summary-card-bg: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(8, 145, 178, 0.05) 100%), rgba(255, 255, 255, 0.85);
   --code-bg: #1a2234;
   
-  --border-subtle: rgba(148, 163, 184, 0.25);
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.85);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.1) 60%, transparent 100%);
+
+  --border-subtle: rgba(148, 163, 184, 0.3);
   --border-hover: rgba(124, 58, 237, 0.5);
   --border-focus: #7c3aed;
 
-  /* Claymorphic 3D Dual-Inset Shadows (Light Mode - Soft Clay) */
-  --clay-panel-bg: #f8fafc;
-  --clay-panel-border: rgba(226, 232, 240, 0.9);
+  /* Frosted Glass-Clay 3D Dual-Inset Depth (Light Mode) */
+  --clay-panel-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(248, 250, 252, 0.78) 100%);
+  --clay-panel-border: rgba(255, 255, 255, 0.9);
   --clay-panel-shadow: 
-    0 16px 32px -6px rgba(100, 116, 139, 0.18),
-    0 6px 14px -3px rgba(100, 116, 139, 0.1),
-    inset 4px 4px 8px rgba(255, 255, 255, 0.95),
-    inset -5px -5px 10px rgba(148, 163, 184, 0.35);
+    0 16px 32px -6px rgba(100, 116, 139, 0.16),
+    0 6px 14px -3px rgba(100, 116, 139, 0.08),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.95),
+    inset -4px -4px 8px rgba(148, 163, 184, 0.28);
   --clay-panel-shadow-hover: 
-    0 22px 40px -8px rgba(100, 116, 139, 0.22),
-    0 8px 18px -4px rgba(100, 116, 139, 0.12),
-    inset 4px 4px 8px rgba(255, 255, 255, 1),
-    inset -5px -5px 10px rgba(148, 163, 184, 0.4);
+    0 22px 40px -8px rgba(100, 116, 139, 0.2),
+    0 8px 18px -4px rgba(100, 116, 139, 0.1),
+    inset 3px 3px 7px rgba(255, 255, 255, 1),
+    inset -4px -4px 9px rgba(148, 163, 184, 0.32);
 
   --clay-btn-primary-bg: linear-gradient(135deg, #7c3aed, #6d28d9);
   --clay-btn-primary-shadow: 
@@ -143,24 +152,24 @@
     inset -2px -2px 4px rgba(255, 255, 255, 0.3),
     inset 3px 3px 6px rgba(76, 29, 149, 0.6);
 
-  --clay-btn-secondary-bg: #f1f5f9;
+  --clay-btn-secondary-bg: rgba(241, 245, 249, 0.82);
   --clay-btn-secondary-shadow: 
-    0 6px 16px -3px rgba(148, 163, 184, 0.35),
+    0 6px 16px -3px rgba(148, 163, 184, 0.3),
     inset 3px 3px 6px rgba(255, 255, 255, 0.95),
-    inset -3px -3px 6px rgba(203, 213, 225, 0.7);
+    inset -3px -3px 6px rgba(203, 213, 225, 0.65);
   --clay-btn-secondary-active: 
     0 2px 6px -1px rgba(148, 163, 184, 0.25),
     inset -2px -2px 4px rgba(255, 255, 255, 0.8),
     inset 3px 3px 6px rgba(203, 213, 225, 0.8);
 
   --clay-carved-shadow: 
-    inset 3px 3px 7px rgba(148, 163, 184, 0.4),
+    inset 3px 3px 7px rgba(148, 163, 184, 0.35),
     inset -2px -2px 5px rgba(255, 255, 255, 0.9);
 
   --clay-pill-shadow: 
-    0 4px 10px -2px rgba(148, 163, 184, 0.3),
+    0 4px 10px -2px rgba(148, 163, 184, 0.25),
     inset 2px 2px 5px rgba(255, 255, 255, 0.9),
-    inset -2px -2px 5px rgba(203, 213, 225, 0.6);
+    inset -2px -2px 5px rgba(203, 213, 225, 0.55);
 
   --hover-overlay: rgba(15, 23, 42, 0.05);
   --ghost-hover: rgba(15, 23, 42, 0.04);
@@ -183,11 +192,12 @@
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: var(--clay-panel-shadow);
-  --shadow-lg: 0 16px 36px rgba(100, 116, 139, 0.2);
+  --shadow-lg: 0 16px 36px rgba(100, 116, 139, 0.18);
   --shadow-glow: 0 0 25px rgba(124, 58, 237, 0.15);
 
-  --bg-gradient-1: radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.08) 0%, transparent 40%);
-  --bg-gradient-2: radial-gradient(circle at 85% 85%, rgba(8, 145, 178, 0.06) 0%, transparent 40%);
+  --bg-gradient-1: radial-gradient(circle at 12% 15%, rgba(124, 58, 237, 0.12) 0%, transparent 45%);
+  --bg-gradient-2: radial-gradient(circle at 88% 85%, rgba(8, 145, 178, 0.10) 0%, transparent 45%);
+  --bg-gradient-3: radial-gradient(circle at 50% 50%, rgba(147, 197, 253, 0.10) 0%, transparent 60%);
 }
 
 * {
@@ -202,7 +212,7 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: var(--bg-gradient-1), var(--bg-gradient-2);
+  background-image: var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3);
   background-attachment: fixed;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -248,15 +258,33 @@ body {
   }
 }
 
-/* Claymorphic 3D Panels & Cards */
+/* Frosted Glass-Clay 3D Panels & Cards */
 .glass-panel,
 .clay-panel,
 .clay-card {
   background: var(--clay-panel-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--clay-panel-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--clay-panel-shadow);
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease;
+}
+
+.glass-panel::before,
+.clay-panel::before,
+.clay-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38%;
+  background: var(--glass-sheen);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  pointer-events: none;
+  opacity: 0.85;
 }
 
 .glass-panel:hover,
@@ -269,6 +297,8 @@ body {
 /* Carved Inset Wells (e.g. inputs, search, code displays) */
 .clay-carved {
   background: var(--bg-input);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius-md);
   box-shadow: var(--clay-carved-shadow);
   border: 1px solid var(--border-subtle);
@@ -328,6 +358,8 @@ body {
 .btn-secondary,
 .clay-btn-secondary {
   background: var(--clay-btn-secondary-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: var(--text-primary);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--clay-btn-secondary-shadow);
@@ -357,8 +389,10 @@ body {
   background: var(--ghost-hover);
 }
 
-/* Claymorphic Pills & Bubbles */
+/* Claymorphic Pills & Bubbles with Frosted Blur */
 .clay-pill {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius-full);
   box-shadow: var(--clay-pill-shadow);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -372,7 +406,7 @@ body {
   transform: translateY(1px) scale(0.98);
 }
 
-/* Badge System */
+/* Badge System with Frosted Glass Layer */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -383,22 +417,27 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.badge-sqlite { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
-.badge-mongodb { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
-.badge-mysql { background: rgba(251, 146, 60, 0.15); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.3); }
-.badge-postgres { background: rgba(167, 139, 250, 0.15); color: #a78bfa; border: 1px solid rgba(167, 139, 250, 0.3); }
+.badge-sqlite { background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); }
+.badge-mongodb { background: rgba(52, 211, 153, 0.16); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.35); }
+.badge-mysql { background: rgba(251, 146, 60, 0.16); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.35); }
+.badge-postgres { background: rgba(167, 139, 250, 0.16); color: #a78bfa; border: 1px solid rgba(167, 139, 250, 0.35); }
 
-.badge-success { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-danger { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); border: 1px solid rgba(244, 63, 94, 0.3); }
-.badge-warning { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-success { background: rgba(16, 185, 129, 0.16); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.35); }
+.badge-danger { background: rgba(244, 63, 94, 0.16); color: var(--accent-rose); border: 1px solid rgba(244, 63, 94, 0.35); }
+.badge-warning { background: rgba(245, 158, 11, 0.16); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.35); }
 
-/* Table Styles */
+/* Table Styles with Frosted Glass Headers */
 .data-table-wrapper {
   overflow-x: auto;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .data-table {
@@ -410,6 +449,8 @@ body {
 
 .data-table th {
   background: var(--bg-tertiary);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--text-secondary);
   font-weight: 600;
   padding: 0.75rem 1rem;
@@ -465,12 +506,14 @@ body {
   animation: pulseGlow 2s infinite ease-in-out;
 }
 
-/* Tactile 3D Clay Icon Button */
+/* Tactile 3D Clay Icon Button with Frosted Blur */
 .clay-icon-btn {
   width: 34px;
   height: 34px;
   border-radius: var(--radius-full);
   background: var(--clay-btn-secondary-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--clay-btn-secondary-shadow);
   border: 1px solid var(--border-subtle);
   display: inline-flex;

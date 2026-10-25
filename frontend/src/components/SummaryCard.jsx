@@ -14,7 +14,9 @@ export default function SummaryCard({
     <div className="clay-panel animate-fade-in" style={{
       padding: '1.5rem',
       marginBottom: '1.75rem',
+      background: 'var(--summary-card-bg)',
       border: '1px solid var(--border-hover)',
+      boxShadow: 'var(--clay-panel-shadow), 0 0 24px var(--accent-purple-glow)',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.9rem', flexWrap: 'wrap', gap: '0.6rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>

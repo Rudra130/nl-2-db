@@ -19,8 +19,9 @@ export default function QueryInspector({ isOpen, onClose, queryData }) {
       left: 0,
       right: 0,
       bottom: 0,
-      background: 'rgba(0, 0, 0, 0.75)',
-      backdropFilter: 'blur(8px)',
+      background: 'rgba(5, 8, 16, 0.72)',
+      backdropFilter: 'blur(16px)',
+      WebkitBackdropFilter: 'blur(16px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -34,6 +35,7 @@ export default function QueryInspector({ isOpen, onClose, queryData }) {
         overflowY: 'auto',
         padding: '1.75rem',
         border: '1px solid var(--border-hover)',
+        boxShadow: '0 24px 60px -12px rgba(0, 0, 0, 0.8), inset 2px 2px 5px rgba(255, 255, 255, 0.15)',
       }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>

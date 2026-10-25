@@ -7,7 +7,7 @@
   <a href="#-architecture--multi-agent-pipeline"><img src="https://img.shields.io/badge/Workflow-LangGraph%20State%20Machine-8b5cf6?style=for-the-badge&logo=diagramsdotnet&logoColor=white" alt="LangGraph" /></a>
   <a href="#-deterministic-ast-security"><img src="https://img.shields.io/badge/Security-AST%20Read--Only%20Shield-f43f5e?style=for-the-badge&logo=shield&logoColor=white" alt="Security" /></a>
   <a href="#-databases-supported"><img src="https://img.shields.io/badge/Dialects-SQLite%20|%20Postgres%20|%20MySQL%20|%20Mongo-06b6d4?style=for-the-badge&logo=database&logoColor=white" alt="Databases" /></a>
-  <a href="#-frontend-claymorphism-ui"><img src="https://img.shields.io/badge/UI-Claymorphism%203D-c084fc?style=for-the-badge&logo=react&logoColor=white" alt="UI" /></a>
+  <a href="#-ui-architecture-frosted-glass-clay-design-system"><img src="https://img.shields.io/badge/UI-Frosted%20Glass--Clay%203D-c084fc?style=for-the-badge&logo=react&logoColor=white" alt="UI" /></a>
 </p>
 
 # AI-Powered Natural Language to Database Query Platform (NL2DB)
@@ -224,6 +224,22 @@ The NL2DB platform executes all natural language queries through a compiled **La
 
 ---
 
+## 🎨 UI Architecture: Frosted Glass-Clay Design System
+
+The frontend combines **Frosted Glassmorphism** and **Tactile 3D Claymorphism** into a harmonious, state-of-the-art aesthetic:
+
+| Aesthetic Dimension | Implementation Details |
+|---|---|
+| **Translucent Frosted Blur** | Multi-pass `-webkit-backdrop-filter: blur(20px) saturate(180%)` allows subtle background radial gradients (`--bg-gradient-1`, `--bg-gradient-2`, `--bg-gradient-3`) to bleed softly through panels and cards. |
+| **Specular Sheen Reflections** | CSS pseudo-elements (`::before`) project an angled crystal highlight sheen along top card boundaries (`linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, transparent 60%)`). |
+| **3D Clay Inset Shadows** | Dual-inset box shadows (`inset 2px 2px 5px rgba(255, 255, 255, 0.12)`, `inset -3px -3px 8px rgba(0, 0, 0, 0.75)`) give buttons, panels, and badges a squishy, inflated depth. |
+| **Carved Inset Wells** | Search inputs, prompt textareas, and code blocks feature inverted concave shadow wells (`inset 3px 3px 7px rgba(0, 0, 0, 0.8)`), feeling physically carved into the interface. |
+| **Tactile Micro-Interactions** | Button clicks depress physically via `transform: translateY(2px) scale(0.98)` with spring-like cubic Bézier easing (`cubic-bezier(0.34, 1.56, 0.64, 1)`). |
+| **Rotating Refresh Icon** | The modernized 3D icon button (`.clay-icon-btn`) features a 180° hover spin and infinite rotational animation (`RotateCw`) during schema introspection and DB ping operations. |
+| **Dual Theme System** | Seamless Dark (Obsidian Glass-Clay) and Light (Soft Porcelain Glass-Clay) toggle with full token persistence in `localStorage`. |
+
+---
+
 ## 📁 Project Structure
 
 ```plaintext
@@ -303,7 +319,7 @@ db language/
     └── src/
         ├── main.jsx
         ├── App.jsx                     # State management, query execution, theme persistence
-        ├── index.css                   # Glassmorphic Dark & Light Mode Design System
+        ├── index.css                   # Frosted Glass-Clay 3D Design System (Dark & Light Mode)
         ├── components/
         │   ├── Header.jsx              # Database switcher, Dark/Light mode toggle, health indicator
         │   ├── SchemaExplorer.jsx      # Interactive database catalog & column inspector

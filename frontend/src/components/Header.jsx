@@ -17,15 +17,16 @@ export default function Header({
 
   return (
     <header style={{
-      borderBottom: '1px solid var(--border-subtle)',
+      borderBottom: '1px solid var(--clay-panel-border)',
       background: 'var(--bg-glass)',
-      backdropFilter: 'blur(20px)',
+      backdropFilter: 'blur(24px) saturate(180%)',
+      WebkitBackdropFilter: 'blur(24px) saturate(180%)',
       position: 'sticky',
       top: 0,
       zIndex: 40,
       padding: '0.9rem 2rem',
       borderRadius: '0 0 var(--radius-xl) var(--radius-xl)',
-      boxShadow: '0 12px 30px -8px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.05)',
+      boxShadow: '0 12px 30px -8px rgba(0, 0, 0, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.08)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',

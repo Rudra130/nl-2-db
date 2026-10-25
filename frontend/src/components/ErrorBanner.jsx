@@ -10,8 +10,11 @@ export default function ErrorBanner({ error, status, onClose }) {
     <div className="clay-panel animate-fade-in" style={{
       padding: '1.15rem 1.35rem',
       marginBottom: '1.75rem',
-      background: isRejection ? 'rgba(244, 63, 94, 0.08)' : 'rgba(245, 158, 11, 0.08)',
+      background: isRejection ? 'rgba(244, 63, 94, 0.10)' : 'rgba(245, 158, 11, 0.10)',
+      backdropFilter: 'blur(16px)',
+      WebkitBackdropFilter: 'blur(16px)',
       border: `1px solid ${isRejection ? 'rgba(244, 63, 94, 0.35)' : 'rgba(245, 158, 11, 0.35)'}`,
+      boxShadow: `var(--clay-panel-shadow), 0 0 20px ${isRejection ? 'rgba(244, 63, 94, 0.15)' : 'rgba(245, 158, 11, 0.15)'}`,
       display: 'flex',
       alignItems: 'flex-start',
       justifyContent: 'space-between',
